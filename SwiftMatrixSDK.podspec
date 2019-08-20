@@ -22,14 +22,14 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
 
-  s.source       = { :git => "https://github.com/matrix-org/matrix-ios-sdk.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/IxllOllxl//matrix-ios-sdk.git", :tag => "v#{s.version}" }
   s.source_files = "MatrixSDK", "MatrixSDK/**/*.{h,m,swift}"
 
   s.requires_arc  = true
 
   s.dependency 'AFNetworking', '~> 3.2.0'
   s.dependency 'GZIP', '~> 1.2.2'
-  
+
   # Requirements for e2e encryption
   s.dependency 'OLMKit', '~> 3.1.0'
   s.dependency 'Realm', '~> 3.17.1'
