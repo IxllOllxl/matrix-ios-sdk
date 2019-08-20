@@ -93,6 +93,11 @@ FOUNDATION_EXPORT NSString *const kMXMembersOfRoomParametersNotMembership;
 @interface MXRestClient : NSObject
 
 /**
+ HTTP client to the home server.
+ */
+@property (nonatomic) MXHTTPClient *httpClient;
+
+/**
  Credentials for the Matrix Client-Server API.
  */
 @property (nonatomic, readonly) MXCredentials *credentials;
