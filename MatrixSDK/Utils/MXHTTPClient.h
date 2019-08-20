@@ -17,6 +17,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
 
 #import "MXHTTPOperation.h"
 
@@ -75,6 +76,11 @@ typedef NS_ENUM(NSUInteger, MXHTTPClientSSLPinningMode) {
 
 
 #pragma mark - Configuration
+/**
+ Use AFNetworking as HTTP client.
+ */
+@property (nonatomic) AFHTTPSessionManager *httpManager;
+
 /**
  `requestParametersInJSON` indicates if parameters passed in [self requestWithMethod:..] methods
  must be serialised in JSON.
