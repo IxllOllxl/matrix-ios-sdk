@@ -206,7 +206,7 @@ NSString* const kMXHTTPClientMatrixErrorNotificationErrorKey = @"kMXHTTPClientMa
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         NSString *token = [prefs stringForKey:@"MXAcessToken"];
         
-        [request setValue:[headers valueForKey:"Authorization"] forHTTPHeaderField:token];
+        [request setValue:[headers valueForKey:@"Authorization"] forHTTPHeaderField:token];
     }
 
     // If a timeout is specified, set it
