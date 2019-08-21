@@ -93,11 +93,6 @@ FOUNDATION_EXPORT NSString *const kMXMembersOfRoomParametersNotMembership;
 @interface MXRestClient : NSObject
 
 /**
- HTTP client to the home server.
- */
-@property (nonatomic) MXHTTPClient *httpClient;
-
-/**
  Credentials for the Matrix Client-Server API.
  */
 @property (nonatomic, readonly) MXCredentials *credentials;
@@ -180,6 +175,14 @@ FOUNDATION_EXPORT NSString *const kMXMembersOfRoomParametersNotMembership;
 -(id)initWithCredentials:(MXCredentials*)credentials andOnUnrecognizedCertificateBlock:(MXHTTPClientOnUnrecognizedCertificate)onUnrecognizedCertBlock NS_REFINED_FOR_SWIFT;
 
 - (void)close;
+
+
+/**
+ Update accessToken for MXHTTPClient
+ 
+ @param accessToken the access token to authenticate requests.
+ */
+- (void)updateAccessToken:(NSString *)accessToken;
 
 
 #pragma mark - Server administration

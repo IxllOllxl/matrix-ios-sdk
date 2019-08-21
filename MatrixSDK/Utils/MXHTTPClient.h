@@ -98,6 +98,13 @@ typedef NS_ENUM(NSUInteger, MXHTTPClientSSLPinningMode) {
 
 #pragma mark - Public methods
 /**
+ Update accessToken for MXHTTPClient
+ 
+ @param accessToken the access token to authenticate requests.
+ */
+- (void)updateAccessToken:(NSString *)accessToken;
+
+/**
  Create an instance to make requests to the server.
 
  @param baseURL the server URL from which requests will be done.

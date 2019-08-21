@@ -204,6 +204,11 @@ MXAuthAction;
     completionQueue = nil;
 }
 
+- (void)updateAccessToken:(NSString *)accessToken
+{
+    [httpClient updateAccessToken:accessToken]
+}
+
 - (NSString *)homeserver
 {
     return self.credentials.homeServer;
