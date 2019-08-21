@@ -112,7 +112,7 @@ NSString* const kMXHTTPClientMatrixErrorNotificationErrorKey = @"kMXHTTPClientMa
         // No need for caching. The sdk caches the data it needs
         [httpManager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
 
-        [self updateAccessToken:accessToken]
+        [self updateAccessToken:accessToken];
         [self setUpNetworkReachibility];
         [self setUpSSLCertificatesHandler];
 
