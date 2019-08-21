@@ -112,12 +112,7 @@ NSString* const kMXHTTPClientMatrixErrorNotificationErrorKey = @"kMXHTTPClientMa
         // No need for caching. The sdk caches the data it needs
         [httpManager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
 
-        // No need for caching. The sdk caches the data it needs
-        if (accessToken)
-        {
-            [httpManager.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@", accessToken] forHTTPHeaderField:@"Authorization"];
-        }
-
+        [self updateAccessToken:accessToken]
         [self setUpNetworkReachibility];
         [self setUpSSLCertificatesHandler];
 
@@ -131,6 +126,15 @@ NSString* const kMXHTTPClientMatrixErrorNotificationErrorKey = @"kMXHTTPClientMa
         }];
     }
     return self;
+}
+
+- (void)updateAccessToken:(NSString *)accessToken
+{
+    // No need for caching. The sdk caches the data it needs
+    if (accessToken)
+    {
+        [httpManager.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@", accessToken] forHTTPHeaderField:@"Authorization"];
+    }
 }
 
 - (void)dealloc

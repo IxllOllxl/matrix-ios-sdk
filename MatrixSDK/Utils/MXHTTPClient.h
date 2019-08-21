@@ -17,6 +17,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
 
 #import "MXHTTPOperation.h"
 
@@ -75,6 +76,7 @@ typedef NS_ENUM(NSUInteger, MXHTTPClientSSLPinningMode) {
 
 
 #pragma mark - Configuration
+
 /**
  `requestParametersInJSON` indicates if parameters passed in [self requestWithMethod:..] methods
  must be serialised in JSON.
@@ -95,6 +97,13 @@ typedef NS_ENUM(NSUInteger, MXHTTPClientSSLPinningMode) {
 
 
 #pragma mark - Public methods
+/**
+ Update accessToken for MXHTTPClient
+ 
+ @param accessToken the access token to authenticate requests.
+ */
+- (void)updateAccessToken:(NSString *)accessToken;
+
 /**
  Create an instance to make requests to the server.
 
