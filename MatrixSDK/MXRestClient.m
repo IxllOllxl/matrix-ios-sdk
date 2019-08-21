@@ -206,7 +206,7 @@ MXAuthAction;
 
 - (void)updateAccessToken:(NSString *)accessToken
 {
-    [httpClient updateAccessToken:accessToken]
+    [httpClient updateAccessToken:accessToken];
 }
 
 - (NSString *)homeserver
