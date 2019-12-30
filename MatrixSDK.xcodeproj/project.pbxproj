@@ -901,6 +901,7 @@
 		B1798303211B3649001FD722 /* MXRoomSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXRoomSummary.swift; sourceTree = "<group>"; };
 		B18D18C12152B8E4003677D1 /* MXRoomMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXRoomMember.swift; sourceTree = "<group>"; };
 		B1F1AE550CF4C15B653DDE6E /* Pods-MatrixSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixSDKTests/Pods-MatrixSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B45754F823B9E9C00043819B /* AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = Pods/AFNetworking/AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		C602B58B1F2268F700B67D87 /* MXRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MXRoom.swift; sourceTree = "<group>"; };
 		C602B58D1F22A8D700B67D87 /* MXImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MXImage.swift; sourceTree = "<group>"; };
 		C61A4AF31E5DD88400442158 /* Dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
@@ -1597,6 +1598,7 @@
 		32C6F92319DD814400EA4E9C = {
 			isa = PBXGroup;
 			children = (
+				B45754F823B9E9C00043819B /* AFNetworking.h */,
 				32C03CBA21231C2500D92712 /* AUTHORS.rst */,
 				32C03CB921231C2500D92712 /* CHANGES.rst */,
 				32C03CB721231C2500D92712 /* Podfile */,
@@ -2225,7 +2227,7 @@
 		32C6F92419DD814400EA4E9C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = matrix.org;
 				TargetAttributes = {
 					32C6F92C19DD814400EA4E9C = {
@@ -2584,6 +2586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2634,6 +2637,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = YES;
 				VERSIONING_SYSTEM = "";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2643,6 +2647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -2687,6 +2692,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = YES;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "";
 				VERSION_INFO_PREFIX = "";
